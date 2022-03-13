@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'echo build'
+                sh 'javac Hello.java'
             }
         }
         stage('Test') { 
@@ -11,9 +11,9 @@ pipeline {
                 sh 'echo test'
             }
         }
-        stage('Deploy') { 
+        stage('Execute') { 
             steps {
-                sh 'echo deploy'
+                sh 'java Hello'
             }
         }
     }
